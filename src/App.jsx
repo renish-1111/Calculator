@@ -23,8 +23,12 @@ function App() {
         setResult(eval(equation))
         setEquation('')
       }
-      if (eval(equation) === undefined) {
+      else if (eval(equation) === undefined) {
         
+      }
+      else if (isNaN(eval(equation))) {
+        setResult(eval(equation))
+        setEquation('')
       }
       else if (eval(equation) === Infinity) {
         setResult(eval(equation))
